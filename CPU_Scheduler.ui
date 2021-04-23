@@ -18,7 +18,108 @@
     <normaloff>:/newPrefix/process schedualing.png</normaloff>:/newPrefix/process schedualing.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">style sheet
+   <string notr="true">
+QScrollBar:horizontal {
+     border: 1px solid #222222;
+     
+	background: none;
+     height: 7px;
+     margin: 0px 16px 0 16px;
+}
+
+QScrollBar::handle:horizontal
+{
+    	background-color: rgb(170, 0, 0);
+      min-height: 20px;
+      border-radius: 2px;
+}
+
+QScrollBar::add-line:horizontal {
+      border: 1px solid #1b1b19;
+      border-radius: 2px;
+  	background-color: rgb(170, 0, 0);
+      width: 14px;
+      subcontrol-position: right;
+      subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+      border: 1px solid #1b1b19;
+      border-radius: 2px;
+      	background-color: rgb(170, 0, 0);
+      width: 14px;
+     subcontrol-position: left;
+     subcontrol-origin: margin;
+}
+
+QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal
+{
+      border: 1px solid black;
+      width: 1px;
+      height: 1px;
+      background: white;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+      background: none;
+}
+
+QScrollBar:vertical
+{
+   	background: none;
+      width: 7px;
+      margin: 16px 0 16px 0;
+      border: 1px solid #222222;
+}
+
+QScrollBar::handle:vertical
+{
+     	background-color: rgb(170, 0, 0);
+      min-height: 20px;
+      border-radius: 2px;
+}
+
+QScrollBar::add-line:vertical
+{
+      border: 1px solid #1b1b19;
+      border-radius: 2px;
+   	background-color: rgb(170, 0, 0);
+      height: 14px;
+      subcontrol-position: bottom;
+      subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical
+{
+      border: 1px solid #1b1b19;
+      border-radius: 2px;
+     	background-color: rgb(170, 0, 0);
+      height: 14px;
+      subcontrol-position: top;
+      subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
+{
+      border: 1px solid black;
+      width: 1px;
+      height: 1px;
+      background: white;
+}
+
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+      background: none;
+}
+
+
+
+
+
+
+
 QRadioButton::indicator
 {
     border-radius: 6px;
@@ -509,104 +610,7 @@ QComboBox
       <item row="0" column="0">
        <widget class="QScrollArea" name="scrollArea">
         <property name="styleSheet">
-         <string notr="true">
-QScrollBar:horizontal {
-     border: 1px solid #222222;
-     
-	background: none;
-     height: 7px;
-     margin: 0px 16px 0 16px;
-}
-
-QScrollBar::handle:horizontal
-{
-    	background-color: rgb(170, 0, 0);
-      min-height: 20px;
-      border-radius: 2px;
-}
-
-QScrollBar::add-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-  	background-color: rgb(170, 0, 0);
-      width: 14px;
-      subcontrol-position: right;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      	background-color: rgb(170, 0, 0);
-      width: 14px;
-     subcontrol-position: left;
-     subcontrol-origin: margin;
-}
-
-QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal
-{
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
-}
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
-{
-      background: none;
-}
-
-QScrollBar:vertical
-{
-   	background: none;
-      width: 7px;
-      margin: 16px 0 16px 0;
-      border: 1px solid #222222;
-}
-
-QScrollBar::handle:vertical
-{
-     	background-color: rgb(170, 0, 0);
-      min-height: 20px;
-      border-radius: 2px;
-}
-
-QScrollBar::add-line:vertical
-{
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-   	background-color: rgb(170, 0, 0);
-      height: 14px;
-      subcontrol-position: bottom;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:vertical
-{
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-     	background-color: rgb(170, 0, 0);
-      height: 14px;
-      subcontrol-position: top;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
-{
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
-}
-
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-{
-      background: none;
-}
-
-
-</string>
+         <string notr="true"/>
         </property>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
@@ -1108,31 +1112,21 @@ QTableWidget{
 
 	color: rgb(0, 0, 0);
 }
+border:none
 </string>
                   </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::AllEditTriggers</set>
+                  </property>
+                  <attribute name="verticalHeaderMinimumSectionSize">
+                   <number>30</number>
+                  </attribute>
+                  <attribute name="verticalHeaderDefaultSectionSize">
+                   <number>40</number>
+                  </attribute>
                   <row>
                    <property name="text">
                     <string>1</string>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
                    </property>
                   </row>
                   <row>
@@ -1229,6 +1223,12 @@ QPushButton:pressed
               </item>
               <item>
                <widget class="QFrame" name="frame_13">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="styleSheet">
                  <string notr="true"/>
                 </property>
@@ -1561,24 +1561,12 @@ QTableWidget{
 }
 </string>
                   </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::AllEditTriggers</set>
+                  </property>
                   <row>
                    <property name="text">
                     <string>1</string>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
                    </property>
                   </row>
                   <row>
@@ -2030,24 +2018,12 @@ QTableWidget{
 }
 </string>
                   </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::AllEditTriggers</set>
+                  </property>
                   <row>
                    <property name="text">
                     <string>1</string>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
                    </property>
                   </row>
                   <row>
@@ -2483,24 +2459,12 @@ QTableWidget{
 }
 </string>
                   </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::AllEditTriggers</set>
+                  </property>
                   <row>
                    <property name="text">
                     <string>1</string>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
                    </property>
                   </row>
                   <row>
@@ -2628,8 +2592,8 @@ QPushButton:pressed
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>93</width>
-                      <height>63</height>
+                      <width>884</width>
+                      <height>205</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_9">
