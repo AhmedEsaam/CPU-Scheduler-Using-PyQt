@@ -1144,6 +1144,11 @@ border:none
                     <string/>
                    </property>
                   </row>
+                  <row>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </row>
                   <column>
                    <property name="text">
                     <string>Process Name</string>
@@ -2592,8 +2597,8 @@ QPushButton:pressed
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>884</width>
-                      <height>205</height>
+                      <width>93</width>
+                      <height>63</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_9">
