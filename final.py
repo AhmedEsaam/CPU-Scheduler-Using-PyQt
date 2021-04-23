@@ -5,6 +5,7 @@ import sys
 import platform
 
 from PyQt5.uic import loadUiType
+
 CPU_Scheduler, _ = loadUiType('CPU_Scheduler.ui')
 
 
@@ -15,14 +16,17 @@ class MainApp(QMainWindow, CPU_Scheduler):
         self.ui = CPU_Scheduler
         self.handle_buttons()
 
-    ###########################################################
+    ############################################################
     # buttons connection to pages ##############################
     def handle_buttons(self):
-        self.btn_1.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_1))
-        self.btn_2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_2))
-        self.btn_3.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_3))
-        self.btn_4.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_4))
+        self.btn_1.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_1))
+        self.btn_2.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_2))
+        self.btn_3.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_3))
+        self.btn_4.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_4))
         self.show()
+
+    ############################################################
+    # fill data to the tables ##################################
 
 
 def main():
