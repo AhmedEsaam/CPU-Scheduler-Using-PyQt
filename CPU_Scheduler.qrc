@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>process schedualing.png</file>
+  </qresource>
+</RCC>
