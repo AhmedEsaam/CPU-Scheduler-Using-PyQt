@@ -1718,8 +1718,8 @@ QPushButton:pressed
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>93</width>
-                      <height>63</height>
+                      <width>884</width>
+                      <height>193</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_7">
@@ -2161,8 +2161,8 @@ QPushButton:pressed
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>93</width>
-                      <height>63</height>
+                      <width>884</width>
+                      <height>193</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_8">
@@ -2307,7 +2307,7 @@ QPushButton:pressed
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_6">
                 <item>
-                 <widget class="QLineEdit" name="process_no4">
+                 <widget class="QLineEdit" name="process_no_4">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -2421,7 +2421,7 @@ QPushButton:pressed
                  </widget>
                 </item>
                 <item>
-                 <widget class="QTableWidget" name="tableWidget_6">
+                 <widget class="QTableWidget" name="tableWidget_4">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
                     <horstretch>0</horstretch>
@@ -2597,8 +2597,8 @@ QPushButton:pressed
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>93</width>
-                      <height>63</height>
+                      <width>884</width>
+                      <height>205</height>
                      </rect>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_9">

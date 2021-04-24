@@ -5,16 +5,18 @@ import sys
 import platform
 
 from PyQt5.uic import loadUiType
+from Tools.demo.beer import n
 
 CPU_Scheduler, _ = loadUiType('CPU_Scheduler.ui')
 
 
 class MainApp(QMainWindow, CPU_Scheduler):
-    def __init__(self):
+    def __init__(self, parent=None):
         QMainWindow.__init__(self)
         self.setupUi(self)
         self.ui = CPU_Scheduler
         self.handle_buttons()
+        self.handle_line_edits()
 
     ############################################################
     # buttons connection to pages ##############################
@@ -23,7 +25,14 @@ class MainApp(QMainWindow, CPU_Scheduler):
         self.btn_2.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_2))
         self.btn_3.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_3))
         self.btn_4.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_4))
+        self.ok_2.clicked.connect(self.handle_line_edits)
         self.show()
+
+    ############################################################
+    # buttons connection to pages ##############################
+    def handle_line_edits(self):
+        n: int = self.process_no_2.text()
+        print(n)
 
     ############################################################
     # fill data to the tables ##################################
