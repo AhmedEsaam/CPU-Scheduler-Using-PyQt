@@ -1,0 +1,84 @@
+N = int(input("no of Processes : "))
+preemptive = input("Enter 1 if preemptive and 0 if non preemptive : ")
+process=[]
+OutputPriority=[]
+
+#sampling time
+to= float (1)
+
+for  i in range(int(N)):
+    burst = input("put burst time of P "+ str(i + 1) + " : ")
+    arrival = input("put arrival time of P " + str(i + 1) + " : ")
+    priority= input("put the priority order of P " + str(i + 1) + " : ")
+    process.append({'arrival time' : float(arrival),'burst time' : float(burst),'process' : int(i+1),'priority' : int(priority)})
+
+#sorting according to arrival time and priority
+
+for i in range(0, int(N)):
+    for j in range(i+1, int(N)):
+        if(process[i]['arrival time']>process[j]['arrival time']):
+            temp = process[i];
+            process[i] = process[j];
+            process[j] = temp;
+        elif (process[i]['arrival time'] == process[j]['arrival time'] and process[i]['priority'] > process[j]['priority']):
+            temp = process[i];
+            process[i] = process[j];
+            process[j] = temp;
+
+if int(preemptive) == 0:
+    for i in range(int(N)):
+        OutputPriority.append({'process' :process[i]['process'],'length' :process[i]['burst time']})
+
+else:
+    current_process = process[0]
+    burst_time = current_process['burst time']
+    length = 0
+    current_time=0
+
+    while(1):
+        current_time += to
+        burst_time -= to
+        length += to
+
+        
+        #deleting the process when it is done and new current process
+        if(burst_time <= 0):
+            length = length + burst_time
+            current_time = current_time +burst_time
+            OutputPriority.append({'process': current_process['process'], 'length': length})
+            process.pop(0)
+            N = N-1
+            if (N == 0):break
+
+            #rearrange the priority according to current time and priority and arrival time
+            for i in range(0, int(N)):
+                for j in range(i + 1, int(N)):
+                    if (current_time >= process[j]['arrival time'] and process[i]['priority'] >process[j]['priority']):
+                        temp = process[i];
+                        process[i] = process[j];
+                        process[j] = temp;
+            current_process = process[0]
+            burst_time = current_process['burst time']
+            length = 0
+        else:
+            # switch context and swapping current process if arrival time = current time and of higher priority
+             for i in range(1,int(N)):
+                  if(current_time >= process[i]['arrival time'] and current_process['priority'] > process[i]['priority']):
+                      process[0]['burst time']=burst_time
+                      OutputPriority.append({'process': current_process['process'], 'length': length})
+                      temp=current_process
+                      current_process = process[i]
+                      process[0]=current_process
+                      process[i]=temp
+                      burst_time = current_process['burst time']
+                      length = 0
+
+        if (N == 0): break
+
+
+
+
+
+
+
+print('output is',OutputPriority)

@@ -1,12 +1,16 @@
 from queue import PriorityQueue
 import queue
 
+
 def init():
     global n1
     n1 = 0
+    global totalBurstTime
+    totalBurstTime = 0.0
+
 
 class Process:
-    def __init__(self, pid, arrival = 0, burst = 0):
+    def __init__(self, pid, arrival=0, burst=0):
         self.pid = int(pid)
         self.arrival = float(arrival)
         self.burst = float(burst)
@@ -23,55 +27,24 @@ inputQueue = PriorityQueue()
 outputQueue = queue.Queue()
 totalWaitingTime = 0.0
 
-def simulate_fcfs():
-    #clear last inputs
-    while not outputQueue.empty():
-        try:
-            outputQueue.get(False)
-        except Empty:
-            continue
-        inputQueue.task_done()    
 
+def simulate_fcfs():
     time = 0.0
-        
-    #output
+
+    # output
     while not inputQueue.empty():
-            p = inputQueue.get()
-            time = p.burst + (time if p.arrival <= time else p.arrival)
-            p.departure = time
-            global totalWaitingTime
-            totalWaitingTime += p.waitingTime()
-            outputQueue.put({'pid': p.pid, 'burst': p.burst, 'arrival': p.arrival})
+        p = inputQueue.get()
+        time += p.burst
+        p.departure = time
+        global totalWaitingTime
+        totalWaitingTime += p.waitingTime()
+        outputQueue.put((p.pid, p.burst))
 
     global totalBurstTime
     totalBurstTime = time
 
-    #print
+    # print
     for n in list(outputQueue.queue):
         print(n)
-    global avgWaitingTime
     avgWaitingTime = totalWaitingTime / int(n1)
     print(avgWaitingTime)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-

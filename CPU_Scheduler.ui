@@ -1111,8 +1111,9 @@ QTableWidget{
 		font: 75 12pt bold &quot;Perpetua Titling MT&quot;;
 
 	color: rgb(0, 0, 0);
+border:none;
 }
-border:none
+
 </string>
                   </property>
                   <property name="editTriggers">
@@ -1127,26 +1128,6 @@ border:none
                   <row>
                    <property name="text">
                     <string>1</string>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
                    </property>
                   </row>
                   <column>
@@ -1563,6 +1544,7 @@ QTableWidget{
 		font: 75 12pt bold &quot;Perpetua Titling MT&quot;;
 
 	color: rgb(0, 0, 0);
+border:none;
 }
 </string>
                   </property>
@@ -1572,26 +1554,6 @@ QTableWidget{
                   <row>
                    <property name="text">
                     <string>1</string>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
                    </property>
                   </row>
                   <column>
@@ -2020,6 +1982,8 @@ QTableWidget{
 		font: 75 12pt bold &quot;Perpetua Titling MT&quot;;
 
 	color: rgb(0, 0, 0);
+border:none;
+
 }
 </string>
                   </property>
@@ -2029,26 +1993,6 @@ QTableWidget{
                   <row>
                    <property name="text">
                     <string>1</string>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
                    </property>
                   </row>
                   <column>
@@ -2461,6 +2405,7 @@ QTableWidget{
 		font: 75 12pt bold &quot;Perpetua Titling MT&quot;;
 
 	color: rgb(0, 0, 0);
+border:none;
 }
 </string>
                   </property>
@@ -2470,26 +2415,6 @@ QTableWidget{
                   <row>
                    <property name="text">
                     <string>1</string>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </row>
-                  <row>
-                   <property name="text">
-                    <string/>
                    </property>
                   </row>
                   <column>
